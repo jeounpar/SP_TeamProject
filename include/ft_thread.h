@@ -1,9 +1,9 @@
 #ifndef FT_THREAD_H
 # define FT_THREAD_H
 
-typedef struct client_s{
-	int fd;
-	char ip[30];
-} client_t;
+#include "../include/ft_socket.h"
+
+void ft_pthread_init(client_t *client_data, int serv_sock);
+void close_sock(client_t *client_data, int serv_sock);
 
 #endif
